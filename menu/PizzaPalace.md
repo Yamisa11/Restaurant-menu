@@ -1,6 +1,6 @@
 # Pizza Palace
 
-## Menu Items
+## Pizza
 
 ### Margherita Pizza
 - **Price:** R95.00
