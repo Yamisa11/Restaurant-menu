@@ -1,0 +1,59 @@
+restaurant:
+  name: Pizza Palace 
+
+menu_items:
+  - name: Margherita Pizza
+    price: 95.00
+    description: Classic pizza with tomato sauce, mozzarella cheese, and fresh basil.
+
+  - name: Pepperoni Pizza
+    price: 109.00
+    description: Delicious pizza topped with pepperoni slices and mozzarella cheese.
+
+  - name: BBQ Chicken Pizza
+    price: 129.00
+    description: Tasty pizza with BBQ sauce, grilled chicken, red onions, and cilantro.
+
+  - name: Veggie Pizza
+    price: 117.00
+    description: Healthy pizza topped with bell peppers, onions, mushrooms, and olives.
+
+  - name: Meat Lover's Pizza
+    price: 139.00
+    description: Hearty pizza with pepperoni, sausage, ham, and bacon.
+
+  - name: Hawaiian Pizza
+    price: 129.00
+    description: Sweet and savory pizza with ham and pineapple.
+
+  - name: White Pizza
+    price: 129.00
+    description: Pizza with a garlic cream sauce, mozzarella, ricotta, and spinach.
+
+  - name: Supreme Pizza
+    price: 139.00
+    description: Loaded pizza with pepperoni, sausage, bell peppers, onions, mushrooms, and olives.
+
+  - name: Buffalo Chicken Pizza
+    price: 129.00
+    description: Spicy pizza with buffalo sauce, grilled chicken, and blue cheese crumbles.
+
+  - name: Four Cheese Pizza
+    price: 119.00
+    description: Rich pizza with mozzarella, cheddar, parmesan, and gorgonzola cheeses.
+
+drinks:
+  - name: Coke
+    price: 17.00
+
+  - name: Diet Coke
+    price: 15.00
+
+  - name: Sprite
+    price: 17.00
+
+  - name: Lemonade
+    price: 15.00
+
+  - name: Iced Tea
+    price: 15.00
