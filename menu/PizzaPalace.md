@@ -1,10 +1,5 @@
 # Pizza Palace
 
-## Contact Information
-- **Site:** 
-- **Email:** 
-- **Phone:** 
-
 ## Menu Items
 
 ### Margherita Pizza
@@ -63,4 +58,5 @@
 
 ### Iced Tea
 - **Price:** R15.00
+
 
