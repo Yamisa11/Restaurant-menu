@@ -11,7 +11,7 @@
     background-color: rgb(20, 19, 19);
     }
 
-    h1,h2,h5{
+    h1,h2,h3,h5{
         color: rgb(242, 201, 76) !important
     }
 
@@ -25,6 +25,9 @@
     .card-body {
   padding: 1rem; 
 }
+.spnPrice{
+    float: right;
+}
    </style>
 </head>
 <body>
@@ -36,7 +39,7 @@
       <div class="col-md-6 mb-4">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title">{{this.name}}</h5>
+            <h5 class="card-title">{{this.name}} <span class="spnPrice">{{this.price}}</span></h5>
             <p class="card-text">{{this.description}}</p>
           </div>
         </div>
