@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Palace Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="/style/style.css">
+   <style>
+    body{
+    font-family: 'Quattrocento', serif !important;
+    background-color: rgb(20, 19, 19);
+    }
+
+    h1,h2,h5{
+        color: rgb(242, 201, 76) !important
+    }
+
+    p{
+        color: rgb(249, 250, 239);
+    }
+    .card{
+         margin: auto;
+        background-color:  rgb(20, 19, 19) !important
+    }
+    .card-body {
+  padding: 1rem; 
+}
+   </style>
+</head>
+<body>
+  <h1>{{menu.restaurant.name}} Menu</h1>
+  <h2>Menu Items</h2>
+  <ul>
+    <div class="row">
+    {{#each menu.menu_items}}
+      <div class="col-md-6 mb-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">{{this.description}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  </ul>
+  <h2>Drinks</h2>
+  <ul>
+    {{#each menu.drinks}}
+      <li>
+        <h3>{{this.name}} - R{{this.price}}</h3>
+      </li>
+    {{/each}}
+  </ul>
+</body>
+</html>

@@ -2,10 +2,16 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const yaml = require('yaml');
-const marked = require('marked');
+const { marked } = require('marked');
+const exphbs = require('express-handlebars');
+const fetch = require('node-fetch');
 
 const app = express();
-const port = 8000;  // Updated port
+const port = 8000; 
+
+app.engine('handlebars', exphbs.engine());
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
 
 // API endpoint to get menu from a YAML file
 app.get('/api/menu', (req, res) => {
@@ -29,6 +35,22 @@ app.get('/api/menu', (req, res) => {
       res.status(500).json({ error: 'Error parsing YAML file' });
     }
   });
+});
+
+app.get('/', (req, res) => {
+  const restaurant = 'PizzaPalace';  
+  const apiUrl = `http://localhost:${port}/api/menu?restaurant=${restaurant}`;
+
+  // Fetch the JSON data from the API
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(menuData => {
+      res.render('menu', { menu: menuData });
+    })
+    .catch(error => {
+      console.error('Error fetching menu data:', error);
+      res.status(500).send('Error fetching menu data');
+    });
 });
 
 app.get('/menu', (req, res) => {
